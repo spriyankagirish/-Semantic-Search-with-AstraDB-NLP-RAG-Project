@@ -1,4 +1,4 @@
-# -Semantic-Search-with-AstraDB-NLP-RAG-Project
+# Semantic-Search-with-AstraDB-NLP-RAG-Project
 
 📂 Skills Highlighted: NLP · RAG · Vector Databases · BM25 · Prompt Engineering · LLMs
 
