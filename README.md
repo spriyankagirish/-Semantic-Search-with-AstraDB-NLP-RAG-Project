@@ -1,5 +1,4 @@
-
-                          ##  Semantic-Search-with-AstraDB-NLP-RAG-Project
+##               Semantic-Search-with-AstraDB-NLP-RAG-Project
 
 
 
