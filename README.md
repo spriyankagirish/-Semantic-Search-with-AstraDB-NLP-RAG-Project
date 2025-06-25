@@ -1,9 +1,8 @@
 # Semantic-Search-with-AstraDB-NLP-RAG-Project
-
-📂 Skills Highlighted: NLP · RAG · Vector Databases · BM25 · Prompt Engineering · LLMs
+📂 Skills Highlighted: NLP · RAG · Vector Databases · MMR · Prompt Engineering · LLMs
 
 📘 Project Overview
-This project showcases a complete semantic search pipeline powered by Retrieval-Augmented Generation (RAG). It leverages AstraDB as a vector store, integrates BM25/MMR reranking, and utilizes LLMs to generate context-aware responses — with the final output rendered into a professional DOCX report.
+This project demonstrates a complete semantic search pipeline using Retrieval-Augmented Generation (RAG). It combines AstraDB for vector storage, Maximal Marginal Relevance (MMR) for reranking, and LLMs for generating accurate, context-aware responses.
 
 🔧 Tech Stack & Tools
 Python
@@ -14,32 +13,45 @@ AstraDB (Vector Store) + CassIO
 
 Sentence Transformers (HuggingFace)
 
-BM25 & MMR Reranking
+MMR Reranking (via LangChain retrievers)
 
-LLMs (e.g., OpenAI/Gemini via LangChain)
+LLMs (e.g., OpenAI, Gemini via LangChain)
 
-python-docx for Report Generation
-
+🔁 Pipeline Overview
+scss
+Copy
+Edit
+PDF 📄  
+   ↓  
+Chunking ✂️ (Semantic-based)  
+   ↓  
+Embedding 🧬 (Sentence Transformers)  
+   ↓  
+AstraDB 🗃 (Vector Store with CassIO)  
+   ↓  
+MMR Retrieval 🪄 (Maximal Marginal Relevance)  
+   ↓  
+RetrievalQA Chain 🔍 (LangChain-based pipeline)  
+   ↓  
+Manual Prompting with LLM 🧠  
+   ↓  
+Final Output: Displayed Answer ✅
 🧩 Key Pipeline Components
 Step	Description
-📄 PDF Ingestion	Parse and extract content from multi-page PDFs
-✂️ Chunking	Perform semantic chunking for better context retention
-🧬 Embedding	Generate vector embeddings using Sentence Transformers
-🗃 Vector Storage	Store embeddings and metadata in AstraDB
-🔍 Retrieval	Retrieve relevant chunks using HNSW-based vector search
-🪄 Reranking	Enhance relevance and diversity with BM25 or MMR
-🧠 LLM Prompting	Use contextually rich prompts to query LLMs
-📄 DOCX Output	Generate final answers and save them as a DOCX report
+📄 PDF Ingestion	Extracts content from multi-page PDF files
+✂️ Chunking	Splits text into semantically meaningful chunks
+🧬 Embedding	Converts chunks to vector form using sentence-transformers
+🗃 Vector Storage	Stores vectors and metadata in AstraDB with CassIO
+🪄 MMR Retrieval	Uses Maximal Marginal Relevance for better diversity
+🔍 RetrievalQA	Combines retriever and LLM to generate context-aware answers
+🧠 LLM Prompting	Manual prompt templates used to guide response generation
+✅ Output	Final answer displayed based on retrieved context
 
 📌 Highlights & Capabilities
-✅ End-to-end RAG pipeline from data ingestion to response generation
+✅ Full RAG workflow from PDF to intelligent answer
+✅ Semantic chunking for better retrieval accuracy
+✅ AstraDB integration for scalable vector search
+✅ Maximal Marginal Relevance (MMR) improves diversity
+✅ RetrievalQA & LLM prompting for accurate responses
 
-✅ Semantic chunking for improved retrieval relevance
-
-✅ Integration of modern vector store (AstraDB) with efficient indexing
-
-✅ Reranking using BM25 and MMR for diverse, high-quality results
-
-✅ Final output rendered in a structured Word document
-
-💡 This project demonstrates how to combine vector databases, semantic embeddings, and LLMs for intelligent document retrieval and generation workflows.
+💡 This project showcases how to combine vector databases, semantic embeddings, and large language models to build intelligent document search and question-answering systems.
